@@ -1,0 +1,176 @@
+/*公用样式*/
+*{padding-bottom: 0px;margin: 0px;}
+body {
+    font-family:Helvetica,Arial,sans-serif;
+    font-size:14px;
+    line-height: 1.5;
+    color: #333;
+    background-color: #fff;
+}
+a {
+    color: #9d9d9d;
+    line-height: 20px;
+    background-color: transparent;/*默认。背景颜色为透明。不必设置*/
+    text-decoration: none;
+    padding: 10px 15px;
+}
+a:hover{
+    color: #fff;
+}
+/*包裹元素*/
+.navbar{
+    background-color: #222;
+    position: fixed;/*固定的页面顶部;*/
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030;/*设置超级大的Z轴值可确保元素在最顶层*/
+    min-height: 50px;
+    border: 1px solid #080808;
+    border-width: 0 0 1px;/*只设置下边框为1px*/
+}
+.container {
+    padding:0px 15px;
+    margin:0px auto;/*元素在网页中自适应居中*/
+}
+/*左边*/
+.navbar-header {
+    position: relative;
+    float: left;/*相对定位没有脱离文档流*/
+    margin-right: 0;
+    margin-left: 0;
+}
+.navbar-brand {
+    color: #9d9d9d; 
+    float: left;/*自动生成块级框*/
+    height: 35px;
+    padding:15px 15px;
+    font-size: 18px;
+    line-height:35px;
+}
+.navbar-toggle{
+    position: relative;/*为.sr-only而设置*/
+    float: right;
+    padding: 9px 10px;
+    margin: 12px 15px 8px 10px;
+    background-color: transparent;
+    border: none;
+}
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+.icon-bar {
+    background-color: #fff;
+    display: block;
+    width: 22px;
+    height: 2px;
+    border-radius: 1px;
+    margin-top: 4px;
+}
+/*右边*/
+.navbar-collapse{
+    max-height: 340px;
+    display: none;
+    float: left;
+    margin:0;
+}
+.hidden-md{
+    display:none;
+}
+.navbar-nav{
+    float: left;
+    margin: 0;
+}
+.navbar-nav>li {
+    float:left;
+}
+.navbar-nav>li>a {
+    line-height: 20px;
+    position: relative;
+    display: block;
+    padding: 10px 15px;
+}
+.navbar-right {
+    float: right;
+    margin-right: -15px;
+}
+/*屏幕*/
+@media screen and (max-width:768px){
+    .navbar-header {
+        width:100%;
+    }
+}@media screen and (min-width:768px){
+    .navbar-toggle {
+        display: none;
+    }
+}
+@media screen and (min-width: 768px){
+    .navbar-brand{
+        margin-left: -15px;
+        padding-top: 0;
+        padding-bottom: 0;
+        line-height: 42px;
+        height: 42px;
+    }
+}
+@media screen and (min-width:1024px){
+    .hidden-md{
+        display:block;
+    }
+}
+@media screen and (max-width: 991px) and (min-width: 768px){
+    .hidden-sm{
+        display:none;
+    }
+}
+@media screen and (min-width:768px){
+    .navbar-collapse{
+        display: block!important;/*!important提高应用优先权*/
+        width: auto;
+        height: auto!important;
+        padding: 0;
+        overflow: visible!important;
+    }
+}
+.navbar-nav li ul {
+    display: none;
+    margin: 0px;
+}
+.navbar-nav li:hover ul{
+    display: block;
+    position: relative;
+    left: 0px;
+    top: 0px;
+}
+.navbar-nav li:hover ul li a{
+    color:#9d9d9d;
+    background:#222;
+    font-size: 11px;
+}
+.navbar-nav li:hover ul li a:hover{
+    background:#222;
+    color: #fff;
+}
+#banner img{width:100%;height:500px;margin-bottom:15px;}
+#content{width:1000px;margin:0px auto;}
+#content #top{width:1000px;margin:0px auto;padding-bottom:100px;}
+#content #top h1{text-align:center; color:#ccc;}
+#content #top p{text-indent:2em;font-size:16px;line-height:30px;height:30px;}
+#content #main-left{width:500px;float:left;height:500px;}
+#content #main-left h2{text-align:center;padding-bottom:20px;}
+#content #main-left ul{line-height:30px;height:30px;font-size:18px;}
+#content #main-left ul a{color:#000;}
+#content #main-left ul a:hover{text-decoration:underline;color:#ccc;}
+#content #main-right{width:500px;float:left;height:500px;}
+#content #main-right h2{text-align:center;padding-bottom:20px;}
+#content #main-right ul{line-height:30px;height:30px;font-size:18px;}
+#footer{height: 100px;background:#666;color:#aaa;text-align: center;clear:both;}
+#footer .ent a{color:#000;}
+.clear{clear:both;}
